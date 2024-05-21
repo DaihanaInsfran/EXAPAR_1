@@ -2,6 +2,7 @@ CREATE DATABASE Basede_datos;
 USE Basede_datos;
 	
 DROP DATABASE Basede_datos;
+
 CREATE TABLE Cliente (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_banco INT ,
@@ -43,3 +44,19 @@ VALUES
 (3, '003', '2024-04-16 12:00:00', 200.00, 10.00, 20.00, 'Doscientos dólares con 00/100', 'Sucursal C'),
 (4, '004', '2024-04-16 13:00:00', 75.00, 3.75, 7.50, 'Setenta y cinco dólares con 00/100', 'Sucursal A'),
 (5, '005', '2024-04-16 14:00:00', 120.00, 6.00, 12.00, 'Ciento veinte dólares con 00/100', 'Sucursal B');
+
+CREATE TABLE Sucursal (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	Descripcion VARCHAR(100),
+	direccion VARCHAR(100),
+	telefono VARCHAR(100),
+	whatsapp VARCHAR(100),
+	mail VARCHAR(100), 
+	estado VARCHAR(15)
+);
+
+INSERT INTO Sucursal (Descripcion, direccion, telefono, whatsapp, mail, estado) 
+VALUES 
+('Sucursal 1', 'Dirección 1', '123456789', '987654321', 'sucursal1@example.com', 'Activo'),
+('Sucursal 2', 'Dirección 2', '987654321', '123456789', 'sucursal2@example.com', 'Inactivo'),
+('Sucursal 3', 'Dirección 3', '555555555', '999999999', 'sucursal3@example.com', 'Activo');

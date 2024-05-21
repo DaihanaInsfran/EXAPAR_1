@@ -7,7 +7,7 @@ namespace EXAMENPAR1
     {
         public int Id { get; set; }
         public int IdCliente { get; set; }
-        public string NroFactura { get; set; }
+        public int NroFactura { get; set; }
         public DateTime FechaHora { get; set; }
         public decimal Total { get; set; }
         public decimal TotalIva5 { get; set; }
@@ -52,7 +52,7 @@ namespace EXAMENPAR1
                     {
                         Id = reader.GetInt32("id");
                         IdCliente = reader.GetInt32("id_Cliente");
-                        NroFactura = reader.GetString("Nro_Factura");
+                        NroFactura = reader.GetInt32("Nro_Factura");
                         FechaHora = reader.GetDateTime("fecha_hora");
                         Total = reader.GetDecimal("total");
                         TotalIva5 = reader.GetDecimal("total_iva_5");
@@ -114,4 +114,5 @@ namespace EXAMENPAR1
             }
         }
     }
+
 }
